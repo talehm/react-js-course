@@ -27,7 +27,7 @@ export default class Main extends Component {
 
     render() {
         console.log(this.state.test)
-        const {test,test2}=this.state
+        const {test,test2} = this.state
         return (
         <div>
             <h1 onClick={this.testMe}> Hello React </h1>

@@ -1,9 +1,9 @@
 import React from 'react';
-import {AppBar,Toolbar,IconButton,Typography,InputBase} from '@material-ui/core'
+import {AppBar,Toolbar,IconButton,Typography,Button,InputBase} from '@material-ui/core'
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-
+import {Link} from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   const classes = useStyles();
 
   return (
@@ -77,6 +77,10 @@ export default function SearchAppBar() {
           <Typography className={classes.title} variant="h6" noWrap>
            Our React APP
           </Typography>
+          <Button color="inherit"><Link to="/">Home</Link></Button>
+          <Button color="inherit"><Link to="/about">About Us</Link></Button>
+          <Button color="inherit"><Link to="/projects">Projects</Link></Button>
+          <Button color="inherit"><Link to="/blog">Blog</Link></Button>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
